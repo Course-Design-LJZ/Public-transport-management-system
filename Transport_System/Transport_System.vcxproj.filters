@@ -10,8 +10,19 @@
     <Filter Include="interaction">
       <UniqueIdentifier>{fa550fbc-6a87-4f01-bec8-cc96e071ba26}</UniqueIdentifier>
     </Filter>
+    <Filter Include="core\Graph">
+      <UniqueIdentifier>{2ade01f6-7f9b-427c-b8a3-1e9b225d824c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Graph.cpp">
+      <Filter>core\Graph</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Graph.h">
+      <Filter>core\Graph</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
