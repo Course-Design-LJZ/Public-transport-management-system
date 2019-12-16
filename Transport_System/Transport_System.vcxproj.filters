@@ -13,16 +13,25 @@
     <Filter Include="core\Graph">
       <UniqueIdentifier>{2ade01f6-7f9b-427c-b8a3-1e9b225d824c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="interaction\main_meun">
+      <UniqueIdentifier>{0eca0966-d8c8-44ec-8aa2-b13bb76e4524}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Graph.cpp">
       <Filter>core\Graph</Filter>
     </ClCompile>
+    <ClCompile Include="main_menu.cpp">
+      <Filter>interaction\main_meun</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graph.h">
       <Filter>core\Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="main_menu.h">
+      <Filter>interaction\main_meun</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
