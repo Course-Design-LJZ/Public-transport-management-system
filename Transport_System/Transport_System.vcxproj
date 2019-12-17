@@ -19,13 +19,28 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AES.cpp" />
+    <ClCompile Include="algorithm.cpp" />
+    <ClCompile Include="base64.cpp" />
+    <ClCompile Include="base_function.cpp" />
     <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="Graph_map.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="main_menu.cpp" />
+    <ClCompile Include="User.cpp" />
+    <ClCompile Include="User_set.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AES.h" />
+    <ClInclude Include="algorithm.h" />
+    <ClInclude Include="base64.h" />
+    <ClInclude Include="base_function.h" />
+    <ClInclude Include="flag.h" />
     <ClInclude Include="Graph.h" />
+    <ClInclude Include="Graph_map.h" />
     <ClInclude Include="main_menu.h" />
+    <ClInclude Include="User.h" />
+    <ClInclude Include="User_set.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
