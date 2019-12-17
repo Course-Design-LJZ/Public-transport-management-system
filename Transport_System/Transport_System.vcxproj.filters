@@ -16,22 +16,76 @@
     <Filter Include="interaction\main_meun">
       <UniqueIdentifier>{0eca0966-d8c8-44ec-8aa2-b13bb76e4524}</UniqueIdentifier>
     </Filter>
+    <Filter Include="function\Graph_map">
+      <UniqueIdentifier>{652be71e-88b9-4559-b9a9-400b6786fd78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\User">
+      <UniqueIdentifier>{e729caae-3a9d-4889-bb83-f6e6804d24c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="function\User_set">
+      <UniqueIdentifier>{0c43fb5f-24da-44fc-abde-577be5b9d8cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\AES">
+      <UniqueIdentifier>{31574d08-bb91-45f6-906b-b901ada6c7e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\base">
+      <UniqueIdentifier>{c1275bef-0675-4383-9e88-902dcc4f5518}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Graph.cpp">
-      <Filter>core\Graph</Filter>
-    </ClCompile>
     <ClCompile Include="main_menu.cpp">
       <Filter>interaction\main_meun</Filter>
     </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>core\User</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>core\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph_map.cpp">
+      <Filter>function\Graph_map</Filter>
+    </ClCompile>
+    <ClCompile Include="User_set.cpp">
+      <Filter>function\User_set</Filter>
+    </ClCompile>
+    <ClCompile Include="AES.cpp">
+      <Filter>core\AES</Filter>
+    </ClCompile>
+    <ClCompile Include="base64.cpp">
+      <Filter>core\AES</Filter>
+    </ClCompile>
+    <ClCompile Include="base_function.cpp">
+      <Filter>core\base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="main_menu.h">
+      <Filter>interaction\main_meun</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph_map.h">
+      <Filter>function\Graph_map</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>core\User</Filter>
+    </ClInclude>
     <ClInclude Include="Graph.h">
       <Filter>core\Graph</Filter>
     </ClInclude>
-    <ClInclude Include="main_menu.h">
-      <Filter>interaction\main_meun</Filter>
+    <ClInclude Include="User_set.h">
+      <Filter>function\User_set</Filter>
+    </ClInclude>
+    <ClInclude Include="AES.h">
+      <Filter>core\AES</Filter>
+    </ClInclude>
+    <ClInclude Include="base64.h">
+      <Filter>core\AES</Filter>
+    </ClInclude>
+    <ClInclude Include="base_function.h">
+      <Filter>core\base</Filter>
+    </ClInclude>
+    <ClInclude Include="flag.h">
+      <Filter>core\base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

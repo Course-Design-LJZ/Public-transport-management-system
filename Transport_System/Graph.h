@@ -5,26 +5,18 @@
 #include <map>
 #include <string>
 #include <queue>
+#include "flag.h"
 
 using namespace std;
-
-#define _OK_ 1
-#define _NO_ 0
-
-#define VI vector
-
-class line {
-
-};
 
 class Graph {
 public:
 	struct edge {
-		int v, w, line;
-		edge(int v, int w, int line) {
+		int v, w, c;
+		edge(int v, int w, int c) {
 			this->v = v;
 			this->w = w;
-			this->line = line;
+			this->c = c;
 		}
 	};
 
