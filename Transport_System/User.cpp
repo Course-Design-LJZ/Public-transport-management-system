@@ -69,8 +69,26 @@ void User::init(string username, string password, string name, int sex, int age,
 	this->admin = admin;
 }
 
+bool User::set_admin(bool flag,int admin)
+{
+	if (admin > this->admin&& admin <= _0ADMIN) {
+		this->admin = flag;
+		return _OK_;
+	}
+	return _NO_;
+}
 
+void User::set_name(string s)
+{
+	this->name = s;
+}
 
+void User::set_age(int age)
+{
+	this->age = age;
+}
 
-
-
+void User::set_sex(int flag)
+{
+	this->sex = flag;
+}

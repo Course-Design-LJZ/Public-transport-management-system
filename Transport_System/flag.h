@@ -12,3 +12,7 @@
 #define _error -1
 
 #define BLOCK_SIZE 16
+
+#define _0ADMIN 2
+#define _ADMIN 1
+#define _USER 0
