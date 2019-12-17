@@ -20,8 +20,8 @@ public:
 		}
 	};
 
-	VI <VI <edge>> G;
-	VI <bool> vis;
+	vector <vector <edge>> G;
+	vector <bool> vis;
 	stack <int> Available;
 
 	int Ins();

@@ -3,8 +3,6 @@
 #define _OK_ 1
 #define _NO_ 0
 
-#define VI vector
-
 #define _male 1
 #define _female -1
 #define _none 0
@@ -16,3 +14,5 @@
 #define _0ADMIN 2
 #define _ADMIN 1
 #define _USER 0
+
+const int INF = 0x3f3f3f3f;

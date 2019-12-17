@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AES.cpp" />
+    <ClCompile Include="algorithm.cpp" />
     <ClCompile Include="base64.cpp" />
     <ClCompile Include="base_function.cpp" />
     <ClCompile Include="Graph.cpp" />
@@ -31,6 +32,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AES.h" />
+    <ClInclude Include="algorithm.h" />
     <ClInclude Include="base64.h" />
     <ClInclude Include="base_function.h" />
     <ClInclude Include="flag.h" />

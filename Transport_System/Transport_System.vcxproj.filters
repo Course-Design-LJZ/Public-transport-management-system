@@ -31,6 +31,9 @@
     <Filter Include="core\base">
       <UniqueIdentifier>{c1275bef-0675-4383-9e88-902dcc4f5518}</UniqueIdentifier>
     </Filter>
+    <Filter Include="core\algorithm">
+      <UniqueIdentifier>{e756d8a9-2cd0-42a5-be12-96a2b1451f82}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -57,6 +60,9 @@
     </ClCompile>
     <ClCompile Include="base_function.cpp">
       <Filter>core\base</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithm.cpp">
+      <Filter>core\algorithm</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="flag.h">
       <Filter>core\base</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm.h">
+      <Filter>core\algorithm</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

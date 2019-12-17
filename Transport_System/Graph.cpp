@@ -2,7 +2,7 @@
 
 int Graph::Ins() {
 	if (G.size() == 0) {
-		VI <edge> tmp;
+		vector <edge> tmp;
 		G.push_back(tmp);
 		vis.push_back(0);
 	}
@@ -13,7 +13,7 @@ int Graph::Ins() {
 		return res;
 	}
 	else {
-		VI <edge> tmp;
+		vector <edge> tmp;
 		G.push_back(tmp);
 		vis.push_back(1);
 		return G.size() - 1;
