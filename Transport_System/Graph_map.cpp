@@ -55,3 +55,10 @@ int Graph_map::change_station(int id, string rename)
 	station_list[id].name = rename;
 	s_station[rename] = id;
 }
+
+int Graph_map::Ins_line(string name)
+{
+	
+}
+
+
