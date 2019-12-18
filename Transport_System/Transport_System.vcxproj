@@ -20,7 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\zzf\bus_inquiry.cpp" />
-    <ClCompile Include="..\..\..\..\zzf\LaS.cpp" />
+    <ClCompile Include="..\..\..\..\zzf\Line and Station choice.cpp" />
     <ClCompile Include="..\..\..\..\zzf\login.cpp" />
     <ClCompile Include="..\..\..\..\zzf\user.cpp" />
     <ClCompile Include="..\..\..\..\zzf\user_system.cpp" />
@@ -37,7 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\zzf\bus_inquiry.h" />
-    <ClInclude Include="..\..\..\..\zzf\LaS.h" />
+    <ClInclude Include="..\..\..\..\zzf\Line and Station choice.h" />
     <ClInclude Include="..\..\..\..\zzf\login.h" />
     <ClInclude Include="..\..\..\..\zzf\user.h" />
     <ClInclude Include="..\..\..\..\zzf\user_system.h" />

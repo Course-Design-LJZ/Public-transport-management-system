@@ -46,7 +46,7 @@
     <Filter Include="interaction\user">
       <UniqueIdentifier>{7d4489b2-6640-4290-bb88-f24f644423dc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="interaction\LaS">
+    <Filter Include="interaction\Line and Station choice">
       <UniqueIdentifier>{381298e0-5a08-4eda-93a2-36e9118da24f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -91,8 +91,8 @@
     <ClCompile Include="..\..\..\..\zzf\user.cpp">
       <Filter>interaction\user</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\zzf\LaS.cpp">
-      <Filter>interaction\LaS</Filter>
+    <ClCompile Include="..\..\..\..\zzf\Line and Station choice.cpp">
+      <Filter>interaction\Line and Station choice</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -138,8 +138,8 @@
     <ClInclude Include="..\..\..\..\zzf\user.h">
       <Filter>interaction\user</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\zzf\LaS.h">
-      <Filter>interaction\LaS</Filter>
+    <ClInclude Include="..\..\..\..\zzf\Line and Station choice.h">
+      <Filter>interaction\Line and Station choice</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
