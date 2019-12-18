@@ -13,25 +13,16 @@ public:
 	string name;
 	vector <int> pass_line;
 	int id;
-	void init(string name, int id) {
-		this->name = name;
-		this->id = id;
-		this->pass_line.clear();
-	}
+	void init(string name, int id); 
 };
 
 class line {
 public:
 	string name;
 	int id;
-	void init(string name, int id) {
-		this->name = name;
-		this->id = id;
-		this->line.clear();
-		this->set.clear();
-	}
-	vector <station> line;
-	map <station, int> set;
+	void init(string name, int id);
+	vector <station> list;
+	map <string, int> set;
 };
 
 class Graph_map {
@@ -54,5 +45,5 @@ public:
 
 	int Ins_line(string name,station star);
 	void Ins_line_station(int lid,int sid,int w);
-	int Del_line(int id);
+	void Del_line(int id);
 };

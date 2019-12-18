@@ -66,40 +66,62 @@ int Graph_map::Ins_line(string name,station star)
 		line_list.push_back(tmp);
 		vis_line.push_back(0);
 	}
-
+	
 	if (!line_Available.empty()) {
 		int id = line_Available.top();
 		line_Available.pop();
 		line_list[id].init(name, id);
 		s_line[name] = id;
 		vis_line[id] = 1;
-		line_list[id].line.push_back(star);
-		line_list[id].set[star] = line_list[id].line.size();
+		line_list[id].list.push_back(star);
+		line_list[id].set[star.name] = line_list[id].list.size();
 	}
 	else {
 		line ltmp;
+		ltmp.init(name, line_list.size());
 		line_list.push_back(ltmp);
-		line_list[line_list.size() - 1].init(name, line_list.size() - 1);
 		s_line[name] = line_list.size() - 1;
 		vis_line.push_back(1);
-		line_list[line_list.size() - 1].line.push_back(star);
-		line_list[line_list.size() - 1].set[star] = 
-			line_list[line_list.size() - 1].line.size();
+		line_list[line_list.size() - 1].list.push_back(star);
+		line_list[line_list.size() - 1].set[star.name] = 
+			line_list[line_list.size() - 1].list.size();
 	}
 	return _OK_;
 }
 
 void Graph_map::Ins_line_station(int lid,int sid,int w)
 {
-	G.Ins_Edge(line_list[lid].line[line_list[lid].line.size() - 1].id,
+	G.Ins_Edge(line_list[lid].list[line_list[lid].list.size() - 1].id,
 		station_list[sid].id, 
 		w, line_list[lid].id);
-	line_list[lid].line.push_back(station_list[lid]);
-	line_list[lid].set[station_list[lid]] = line_list[lid].line.size();
+	line_list[lid].list.push_back(station_list[lid]);
+	line_list[lid].set[station_list[lid].name] = 
+		line_list[lid].list.size();
 }
 
-int Graph_map::Del_line(int id)
+void Graph_map::Del_line(int id)
 {
+	for (int i = 0; i < line_list[id].list.size() - 2; i++) {
+		G.Del_Edge(line_list[id].list[i].id, 
+			line_list[id].list[i + 1].id, 
+			line_list[id].id);
+	}
+	s_line[line_list[id].name] = 0;
+	vis_line[id] = 0;
+	line_Available.push(id);
+}
 
-	return 0;
+void station::init(string name, int id)
+{
+	this->name = name;
+	this->id = id;
+	this->pass_line.clear();
+}
+
+void line::init(string name, int id)
+{
+	this->name = name;
+	this->id = id;
+	this->list.clear();
+	this->set.clear();
 }
