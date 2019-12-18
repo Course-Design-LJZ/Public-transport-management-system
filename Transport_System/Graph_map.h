@@ -47,4 +47,9 @@ public:
 	int Del_station(int id);
 	int change_station(int id, string rename);
 
+	int Ins_line();
+	int Ins_line_station();
+	int Del_line_station();
+	int Del_line();
+	int change_line();
 };
