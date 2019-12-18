@@ -59,6 +59,6 @@ void main_menu()
 	}
 }
 
-//int main() {
-//	main_menu();
-//}
+int main() {
+	main_menu();
+}
