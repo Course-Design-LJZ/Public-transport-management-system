@@ -8,8 +8,9 @@ using namespace std;
 string s;
 
 int main() {
-	cout << str_int("-12345") << endl;
-	cout << str_int("12345") << endl;
-	cout << int_str(-12345) << endl;
-	cout << int_str(12345) << endl;
+	string s = "kaskdhaskfd";
+	AES solve;
+	cout << s << endl;
+	//cout << solve.EncryptionAES(s) << endl;
+	//cout << solve.DecryptionAES(s) << endl;
 }
