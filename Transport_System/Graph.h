@@ -30,7 +30,7 @@ public:
 
 	int Del(int u);
 
-	int Del_Edge(int u, int v);
+	int Del_Edge(int u, int v,int c);
 
 	int change(int u, int v, int w, int c);
 };
