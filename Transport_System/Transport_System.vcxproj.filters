@@ -34,20 +34,17 @@
     <Filter Include="core\algorithm">
       <UniqueIdentifier>{e756d8a9-2cd0-42a5-be12-96a2b1451f82}</UniqueIdentifier>
     </Filter>
-    <Filter Include="interaction\user_system">
-      <UniqueIdentifier>{874b310e-f2dd-44e8-8278-2dd7acbd66e7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="interaction\login">
-      <UniqueIdentifier>{533f0044-9c7b-42b9-8d80-82aa797a4a6e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="interaction\bus_inquiry">
-      <UniqueIdentifier>{66febd1a-459d-4c49-9180-2ebab5ca2a13}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="interaction\user">
-      <UniqueIdentifier>{7d4489b2-6640-4290-bb88-f24f644423dc}</UniqueIdentifier>
+      <UniqueIdentifier>{d5f8f937-b3ee-488f-b358-d47d7b5ff3ab}</UniqueIdentifier>
     </Filter>
     <Filter Include="interaction\Line and Station choice">
-      <UniqueIdentifier>{381298e0-5a08-4eda-93a2-36e9118da24f}</UniqueIdentifier>
+      <UniqueIdentifier>{bc831822-e712-4e73-9e64-0020113ecfd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interaction\login">
+      <UniqueIdentifier>{480f9b32-d3c6-4963-ad18-c0a493ded16c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interaction\user_system">
+      <UniqueIdentifier>{9231b831-317a-45e9-8c88-5dcbc0a453b4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -79,20 +76,17 @@
     <ClCompile Include="algorithm.cpp">
       <Filter>core\algorithm</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\zzf\user_system.cpp">
-      <Filter>interaction\user_system</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\zzf\login.cpp">
-      <Filter>interaction\login</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\zzf\bus_inquiry.cpp">
+    <ClCompile Include="interaction\bus_inquiry.cpp">
       <Filter>interaction\bus_inquiry</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\zzf\user.cpp">
-      <Filter>interaction\user</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\zzf\Line and Station choice.cpp">
+    <ClCompile Include="interaction\Line and Station choice.cpp">
       <Filter>interaction\Line and Station choice</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\login.cpp">
+      <Filter>interaction\login</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\user_system.cpp">
+      <Filter>interaction\user_system</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -126,20 +120,17 @@
     <ClInclude Include="algorithm.h">
       <Filter>core\algorithm</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\zzf\user_system.h">
-      <Filter>interaction\user_system</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\zzf\login.h">
-      <Filter>interaction\login</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\zzf\bus_inquiry.h">
+    <ClInclude Include="interaction\bus_inquiry.h">
       <Filter>interaction\bus_inquiry</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\zzf\user.h">
-      <Filter>interaction\user</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\zzf\Line and Station choice.h">
+    <ClInclude Include="interaction\Line and Station choice.h">
       <Filter>interaction\Line and Station choice</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\login.h">
+      <Filter>interaction\login</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\user_system.h">
+      <Filter>interaction\user_system</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
