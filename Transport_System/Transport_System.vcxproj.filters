@@ -34,6 +34,21 @@
     <Filter Include="core\algorithm">
       <UniqueIdentifier>{e756d8a9-2cd0-42a5-be12-96a2b1451f82}</UniqueIdentifier>
     </Filter>
+    <Filter Include="interaction\user_system">
+      <UniqueIdentifier>{874b310e-f2dd-44e8-8278-2dd7acbd66e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interaction\login">
+      <UniqueIdentifier>{533f0044-9c7b-42b9-8d80-82aa797a4a6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interaction\bus_inquiry">
+      <UniqueIdentifier>{66febd1a-459d-4c49-9180-2ebab5ca2a13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interaction\user">
+      <UniqueIdentifier>{7d4489b2-6640-4290-bb88-f24f644423dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interaction\LaS">
+      <UniqueIdentifier>{381298e0-5a08-4eda-93a2-36e9118da24f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -63,6 +78,21 @@
     </ClCompile>
     <ClCompile Include="algorithm.cpp">
       <Filter>core\algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\zzf\user_system.cpp">
+      <Filter>interaction\user_system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\zzf\login.cpp">
+      <Filter>interaction\login</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\zzf\bus_inquiry.cpp">
+      <Filter>interaction\bus_inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\zzf\user.cpp">
+      <Filter>interaction\user</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\zzf\LaS.cpp">
+      <Filter>interaction\LaS</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +125,21 @@
     </ClInclude>
     <ClInclude Include="algorithm.h">
       <Filter>core\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\zzf\user_system.h">
+      <Filter>interaction\user_system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\zzf\login.h">
+      <Filter>interaction\login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\zzf\bus_inquiry.h">
+      <Filter>interaction\bus_inquiry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\zzf\user.h">
+      <Filter>interaction\user</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\zzf\LaS.h">
+      <Filter>interaction\LaS</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
