@@ -97,7 +97,8 @@ void Graph_map::Ins_line_station(int lid,int sid,int w)
 	line_list[lid].list.push_back(station_list[lid]);
 	line_list[lid].set[station_list[lid].name] = 
 		line_list[lid].list.size();
-	station_list[lid].pass_line.push_back(line_list[lid].id);
+	station_list[sid].pass_line.push_back(line_list[lid].id);
+	station_list[sid]._line[lid] = station_list[sid].pass_line.size() - 1;
 }
 
 void Graph_map::Del_line(int id)
@@ -106,6 +107,15 @@ void Graph_map::Del_line(int id)
 		G.Del_Edge(line_list[id].list[i].id, 
 			line_list[id].list[i + 1].id, 
 			line_list[id].id);
+	}
+	for (int i = 0; i < line_list[id].list.size() - 1; i++) {
+		station_list[s_station[line_list[id].list[i].name]].
+			pass_line.erase(
+				station_list[s_station[line_list[id].list[i].name]].
+				pass_line.begin() + 
+				station_list[s_station[line_list[id].list[i].name]].
+				_line[id]);
+		station_list[s_station[line_list[id].list[i].name]]._line[id] = 0;
 	}
 	s_line[line_list[id].name] = 0;
 	vis_line[id] = 0;

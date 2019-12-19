@@ -12,6 +12,7 @@ class station {
 public:
 	string name;
 	vector <int> pass_line;
+	map <int, int> _line;
 	int id;
 	void init(string name, int id); 
 };
