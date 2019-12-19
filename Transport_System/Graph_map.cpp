@@ -97,6 +97,7 @@ void Graph_map::Ins_line_station(int lid,int sid,int w)
 	line_list[lid].list.push_back(station_list[lid]);
 	line_list[lid].set[station_list[lid].name] = 
 		line_list[lid].list.size();
+	station_list[lid].pass_line.push_back(line_list[lid].id);
 }
 
 void Graph_map::Del_line(int id)
