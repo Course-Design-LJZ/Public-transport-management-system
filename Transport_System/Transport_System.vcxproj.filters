@@ -67,6 +67,9 @@
     <ClCompile Include="algorithm.cpp">
       <Filter>core\algorithm</Filter>
     </ClCompile>
+    <ClCompile Include="File.cpp">
+      <Filter>function\File</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main_menu.h">
@@ -98,6 +101,9 @@
     </ClInclude>
     <ClInclude Include="algorithm.h">
       <Filter>core\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="File.h">
+      <Filter>function\File</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

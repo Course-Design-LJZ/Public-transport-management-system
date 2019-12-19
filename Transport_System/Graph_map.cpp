@@ -117,6 +117,7 @@ void Graph_map::Del_line(int id)
 				_line[id]);
 		station_list[s_station[line_list[id].list[i].name]]._line[id] = 0;
 	}
+	line_list[id].list.clear();
 	s_line[line_list[id].name] = 0;
 	vis_line[id] = 0;
 	line_Available.push(id);
