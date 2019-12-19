@@ -9,6 +9,8 @@ using namespace std;
 
 class User {
 public:
+	string username;
+
 	bool check_password(string s);
 	string query_name();
 	int query_sex();
@@ -29,7 +31,6 @@ public:
 	void set_sex(int flag);
 
 private:
-	string username;
 	string password;
 	string name;
 	int sex;

@@ -34,6 +34,9 @@
     <Filter Include="core\algorithm">
       <UniqueIdentifier>{e756d8a9-2cd0-42a5-be12-96a2b1451f82}</UniqueIdentifier>
     </Filter>
+    <Filter Include="function\File">
+      <UniqueIdentifier>{8a60c23b-0a35-4c1b-a0dc-255d4763d642}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
