@@ -53,10 +53,10 @@ void User_set::change_info(int id, string name, int sex, int age)
 	list[id].set_age(age);
 }
 
-void User_set::Ins_Uesr(string username, string password, string name, int sex, int age)
+void User_set::Ins_Uesr(string username, string password, string name, int sex, int age,int admin)
 {
 	User tmp;
-	tmp.init(username, password, name, sex, age, _USER);
+	tmp.init(username, password, name, sex, age, admin);
 	list.push_back(tmp);
 	s_user[username] = list.size();
 	vis.push_back(1);
