@@ -6,8 +6,19 @@
 #include <string>
 #include <fstream>
 #include "base_function.h"
+#include <stdio.h>
+#include <io.h>
+#include <string>
+#include <vector>
 
 using namespace std;
+
+class file_list {
+public:	
+	vector <string> file_list;
+
+	int get_file_list(string path);
+};
 
 User_set File_input_User_set_AES();
 void File_output_User_set_AES(User_set out);

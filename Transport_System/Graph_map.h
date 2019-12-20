@@ -5,6 +5,7 @@
 #include <map>
 #include <string>
 #include "Graph.h"
+#include <iostream>
 
 using namespace std;
 
@@ -23,6 +24,7 @@ public:
 	int id;
 	void init(string name, int id);
 	vector <station> list;
+	vector <int> _w;
 	map <string, int> set;
 };
 

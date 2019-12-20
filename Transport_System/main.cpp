@@ -1,16 +1,10 @@
-#include "AES.h"
-#include "base_function.h"
+#include "File.h"
 #include <iostream>
-#include <string>
 
 using namespace std;
 
-string s;
-
 int main() {
-	string s = "kaskdhaskfd";
-	AES solve;
-	cout << s << endl;
-	//cout << solve.EncryptionAES(s) << endl;
-	//cout << solve.DecryptionAES(s) << endl;
+	Graph_map test;
+	test = File_input_Graph_map();
+	File_output_Graph_map_AES(test);
 }
