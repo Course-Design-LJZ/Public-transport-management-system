@@ -1,15 +1,10 @@
-#include "AES.h"
-#include "base_function.h"
+#include "File.h"
 #include <iostream>
-#include <string>
 
 using namespace std;
 
-string s;
-
 int main() {
-	cout << str_int("-12345") << endl;
-	cout << str_int("12345") << endl;
-	cout << int_str(-12345) << endl;
-	cout << int_str(12345) << endl;
+	Graph_map test;
+	test = File_input_Graph_map();
+	File_output_Graph_map_AES(test);
 }

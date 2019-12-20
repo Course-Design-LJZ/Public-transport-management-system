@@ -1190,7 +1190,6 @@ string AES::DecryptionAES(const string& strSrc)
 			if (szDataOut[i] != tmp)
 			{
 				memset(szDataOut, 0, length);
-				cout << "去填充失败！解密出错！！" << endl;
 				break;
 			}
 			else

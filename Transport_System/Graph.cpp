@@ -53,11 +53,11 @@ int Graph::Del(int u)
 	else return _NO_;
 }
 
-int Graph::Del_Edge(int u, int v)
+int Graph::Del_Edge(int u, int v,int c)
 {
 	bool flag = 0;
 	for (int i = 0; i < G[u].size(); i++) {
-		if (G[u][i].v == v) {
+		if (G[u][i].v == v && G[u][i].c == c) {
 			G[u].erase(G[u].begin() + i);
 			flag = 1;
 		}
@@ -65,7 +65,7 @@ int Graph::Del_Edge(int u, int v)
 
 	if (flag) {
 		for (int i = 0; i < G[v].size(); i++) {
-			if (G[v][i].v == u) {
+			if (G[v][i].v == u && G[u][i].c == c) {
 				G[v].erase(G[v].begin() + i);
 			}
 		}
@@ -76,7 +76,7 @@ int Graph::Del_Edge(int u, int v)
 
 int Graph::change(int u, int v, int w,int c)
 {
-	if (Del_Edge(u, v) == _OK_) {
+	if (Del_Edge(u, v, c) == _OK_) {
 		Ins_Edge(u, v, w, c);
 		return _OK_;
 	}
