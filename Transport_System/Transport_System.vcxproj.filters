@@ -37,6 +37,18 @@
     <Filter Include="function\File">
       <UniqueIdentifier>{8a60c23b-0a35-4c1b-a0dc-255d4763d642}</UniqueIdentifier>
     </Filter>
+    <Filter Include="interaction\bus_inquiry">
+      <UniqueIdentifier>{ac18d5b1-164d-428a-90ad-da63ea751b9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interaction\line and Station choice">
+      <UniqueIdentifier>{f4a70c3b-da9c-47c4-8905-874cc65b27c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interaction\login">
+      <UniqueIdentifier>{e457d47b-30bf-4272-accd-5b7a344ac32f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interaction\user_system">
+      <UniqueIdentifier>{ee729d41-aaa2-4b60-a907-4589d3788670}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -69,6 +81,18 @@
     </ClCompile>
     <ClCompile Include="File.cpp">
       <Filter>function\File</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\bus_inquiry.cpp">
+      <Filter>interaction\bus_inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\Line and Station choice.cpp">
+      <Filter>interaction\line and Station choice</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\login.cpp">
+      <Filter>interaction\login</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\user_system.cpp">
+      <Filter>interaction\user_system</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +128,18 @@
     </ClInclude>
     <ClInclude Include="File.h">
       <Filter>function\File</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\bus_inquiry.h">
+      <Filter>interaction\bus_inquiry</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\Line and Station choice.h">
+      <Filter>interaction\line and Station choice</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\login.h">
+      <Filter>interaction\login</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\user_system.h">
+      <Filter>interaction\user_system</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

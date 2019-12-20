@@ -7,7 +7,7 @@ int bus_inquiry(){
 		system("cls");
 		for (int i = 1; i <= 37; i++) printf(" ");
 		for (int i = 1; i <= 4; i++) printf(" ");
-		printf("公交查询系统\n");
+		printf("公交查询\n");
 		for (int i = 1; i <= 37; i++) printf(" ");
 		for (int i = 1; i <= 20; i++) printf("*");
 		printf("\n");
