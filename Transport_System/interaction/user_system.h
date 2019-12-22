@@ -3,6 +3,7 @@
 #include <conio.h>
 using namespace std;
 
+int login();
 
-int user_system ();
-void main_menu_user_system ();
+void  user_system_login();
+

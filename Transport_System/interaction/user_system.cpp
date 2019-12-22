@@ -1,26 +1,26 @@
-#include"user_system.h"
+#include "user_system.h"
 
-
-int user_system (){
+int login (){
 	int x = 40, y = 0;
 	while (1) {
 		system("cls");
 		for (int i = 1; i <= 37; i++) printf(" ");
 		for (int i = 1; i <= 4; i++) printf(" ");
-		printf("用户登录系统\n");
+		printf("登陆成功\n");
 		for (int i = 1; i <= 37; i++) printf(" ");
 		for (int i = 1; i <= 20; i++) printf("*");
 		printf("\n");
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j <= 40; j++) {
 				if (j == x && i == y) {
 					printf(">");
 				}
 				else printf(" ");
 			}
-			if (i == 0) printf(" 登录 ");
-			if (i == 1) printf(" 注册 ");
-			if (i == 2) printf(" 退出 ");
+			if (i == 0) printf(" 公交查询 ");
+			if (i == 1) printf(" 用户编辑 ");
+			if (i == 2) printf(" 线路站点编辑 ");
+			if (i == 3) printf(" 退出 ");
 			for (int k = 1; k < 5; k++) printf(" ");
 			printf("\n");
 		}
@@ -29,25 +29,27 @@ int user_system (){
 		printf("\n");
 		char input;
 		input = _getch();
-		if (input == 80 && y < 2) y++;
+		if (input == 80 && y < 3) y++;
 		else if(input == 80) y = 0;
 		if (input == 72 && y > 0) y--;
-		else if (input == 72) y = 2;
+		else if (input == 72) y = 3;
 		if (input == 13) break;
 	}
 	return y;
-	
-	
 } 
 
-void main_menu_user_system (){
+void  user_system_login (){
+
 	while (1) {
-		int flag = user_system ();
+		int flag = login ();
 		if (flag == 0) {
-			// 登录
+			//公交查询 
 		}
 		else if (flag == 1) {
-			// 注册 
+			// 用户编辑 
+		}
+		else if (flag == 2) {
+			// 线路站点编辑 
 		}
 		else break;
 	}

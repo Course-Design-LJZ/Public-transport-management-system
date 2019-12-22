@@ -1,4 +1,4 @@
-#include "Graph_map.h"
+﻿#include "Graph_map.h"
 
 int Graph_map::Ins_station(string name)
 {
@@ -75,6 +75,7 @@ int Graph_map::Ins_line(string name,station star)
 		vis_line[id] = 1;
 		line_list[id].list.push_back(star);
 		line_list[id].set[star.name] = line_list[id].list.size();
+		station_list[s_station[star.name]].pass_line.push_back(line_list[id].id);
 	}
 	else {
 		line ltmp;
@@ -85,18 +86,17 @@ int Graph_map::Ins_line(string name,station star)
 		line_list[line_list.size() - 1].list.push_back(star);
 		line_list[line_list.size() - 1].set[star.name] = 
 			line_list[line_list.size() - 1].list.size();
+		station_list[s_station[star.name]].pass_line.push_back(line_list[line_list.size() - 1].id);
 	}
 	return _OK_;
 }
 
 void Graph_map::Ins_line_station(int lid,int sid,int w)
 {
-	G.Ins_Edge(line_list[lid].list[line_list[lid].list.size() - 1].id,
-		station_list[sid].id, 
-		w, line_list[lid].id);
-	line_list[lid].list.push_back(station_list[lid]);
-	line_list[lid].set[station_list[lid].name] = 
-		line_list[lid].list.size();
+	int id_1 = line_list[lid].list.size();
+	G.Ins_Edge(line_list[lid].list[id_1-1].id, station_list[sid].id, w, line_list[lid].id);
+	line_list[lid].list.push_back(station_list[sid]);
+	line_list[lid].set[station_list[sid].name] = id_1;
 	station_list[sid].pass_line.push_back(line_list[lid].id);
 	station_list[sid]._line[lid] = station_list[sid].pass_line.size() - 1;
 	line_list[lid]._w.push_back(w);

@@ -1,13 +1,12 @@
 #include"bus_inquiry.h"
 
-
-int bus_inquiry(){
+int draw_bus_inquiry(){
 	int x = 40, y = 0;
 	while (1) {
 		system("cls");
 		for (int i = 1; i <= 37; i++) printf(" ");
 		for (int i = 1; i <= 4; i++) printf(" ");
-		printf("公交查询\n");
+		printf(u8"公交查询\n");
 		for (int i = 1; i <= 37; i++) printf(" ");
 		for (int i = 1; i <= 20; i++) printf("*");
 		printf("\n");
@@ -18,12 +17,12 @@ int bus_inquiry(){
 				}
 				else printf(" ");
 			}
-			if (i == 0) printf(" 站点查询 ");
-			if (i == 1) printf(" 线路查询 ");
-			if (i == 2) printf(" 站站查询 ");
-			if (i == 3) printf(" 最短距离查询 ");
-			if (i == 4) printf(" 最少换乘查询 ");
-			if (i == 5) printf(" 退出 ");
+			if (i == 0) printf(u8" 站点查询 ");
+			if (i == 1) printf(u8" 线路查询 ");
+			if (i == 2) printf(u8" 站站查询 ");
+			if (i == 3) printf(u8" 最短距离查询 ");
+			if (i == 4) printf(u8" 最少换乘查询 ");
+			if (i == 5) printf(u8" 退出 ");
 			for (int k = 1; k < 5; k++) printf(" ");
 			printf("\n");
 		}
@@ -42,22 +41,27 @@ int bus_inquiry(){
 }    
 	
 
-void login_bus_inquiry (){
+void bus_inquiry (){
 	while (1) {
-		int flag = bus_inquiry();
+		int flag = draw_bus_inquiry();
 		if (flag == 0) {
+			query_station();
 			//站点查询 
 		}
 		else if (flag == 1) {
+			query_line();
 			// 线路查询  
 		}
 		else if (flag == 2) {
+			query_station_station();
 			// 站站查询 
 		}
 		else if (flag == 3) {
+			query_sort_path();
 			// 最短距离查询 
 		}
 		else if (flag == 4) {
+			query_less_path();
 			// 最少换乘查询 
 		}
 

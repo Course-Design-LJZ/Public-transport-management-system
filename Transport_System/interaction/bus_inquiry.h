@@ -1,8 +1,9 @@
 #include <iostream>
 #include <cstdio>
 #include <conio.h>
+#include "..\\interaction.h"
 using namespace std;
 
-int bus_inquiry();
+int draw_bus_inquiry();
 
-void login_bus_inquiry ();
+void bus_inquiry ();

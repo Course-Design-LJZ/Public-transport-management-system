@@ -1,10 +1,10 @@
-#include "File.h"
-#include <iostream>
+#include "interaction/main_menu.h"
+//#include "interaction.h"
 
 using namespace std;
 
 int main() {
-	Graph_map test;
-	test = File_input_Graph_map();
-	File_output_Graph_map_AES(test);
+	infile();
+	main_menu();
+	
 }

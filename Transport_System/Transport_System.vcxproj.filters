@@ -13,9 +13,6 @@
     <Filter Include="core\Graph">
       <UniqueIdentifier>{2ade01f6-7f9b-427c-b8a3-1e9b225d824c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="interaction\main_meun">
-      <UniqueIdentifier>{0eca0966-d8c8-44ec-8aa2-b13bb76e4524}</UniqueIdentifier>
-    </Filter>
     <Filter Include="function\Graph_map">
       <UniqueIdentifier>{652be71e-88b9-4559-b9a9-400b6786fd78}</UniqueIdentifier>
     </Filter>
@@ -43,18 +40,21 @@
     <Filter Include="interaction\line and Station choice">
       <UniqueIdentifier>{f4a70c3b-da9c-47c4-8905-874cc65b27c3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="interaction\login">
-      <UniqueIdentifier>{e457d47b-30bf-4272-accd-5b7a344ac32f}</UniqueIdentifier>
+    <Filter Include="interaction\main_menu">
+      <UniqueIdentifier>{b481158f-ad36-4e82-b22a-15323cc755fa}</UniqueIdentifier>
     </Filter>
     <Filter Include="interaction\user_system">
+      <UniqueIdentifier>{e457d47b-30bf-4272-accd-5b7a344ac32f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interaction\login">
       <UniqueIdentifier>{ee729d41-aaa2-4b60-a907-4589d3788670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="function\interaction">
+      <UniqueIdentifier>{59dcc284-f39d-4f25-b50d-3e36d4ddd082}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="main_menu.cpp">
-      <Filter>interaction\main_meun</Filter>
-    </ClCompile>
     <ClCompile Include="User.cpp">
       <Filter>core\User</Filter>
     </ClCompile>
@@ -88,17 +88,23 @@
     <ClCompile Include="interaction\Line and Station choice.cpp">
       <Filter>interaction\line and Station choice</Filter>
     </ClCompile>
-    <ClCompile Include="interaction\login.cpp">
-      <Filter>interaction\login</Filter>
+    <ClCompile Include="interaction\main_menu.cpp">
+      <Filter>interaction\main_menu</Filter>
     </ClCompile>
     <ClCompile Include="interaction\user_system.cpp">
       <Filter>interaction\user_system</Filter>
     </ClCompile>
+    <ClCompile Include="interaction\login.cpp">
+      <Filter>interaction\login</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction.cpp">
+      <Filter>function\interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="darw_choice.cpp">
+      <Filter>function\interaction</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main_menu.h">
-      <Filter>interaction\main_meun</Filter>
-    </ClInclude>
     <ClInclude Include="Graph_map.h">
       <Filter>function\Graph_map</Filter>
     </ClInclude>
@@ -135,11 +141,20 @@
     <ClInclude Include="interaction\Line and Station choice.h">
       <Filter>interaction\line and Station choice</Filter>
     </ClInclude>
-    <ClInclude Include="interaction\login.h">
-      <Filter>interaction\login</Filter>
+    <ClInclude Include="interaction\main_menu.h">
+      <Filter>interaction\main_menu</Filter>
     </ClInclude>
     <ClInclude Include="interaction\user_system.h">
       <Filter>interaction\user_system</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\login.h">
+      <Filter>interaction\login</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction.h">
+      <Filter>function\interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="darw_choice.h">
+      <Filter>function\interaction</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

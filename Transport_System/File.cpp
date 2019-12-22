@@ -2,7 +2,7 @@
 
 int file_list::get_file_list(string path)
 {
-	long handle;
+	intptr_t handle;
 	struct _finddata_t fileinfo;
 	handle = _findfirst(path.c_str(), &fileinfo);
 	if (handle == -1) return -1;
@@ -75,12 +75,13 @@ void File_output_User_set_AES(User_set out)
 	ofstream admin("data\\user\\5.user");
 
 	for (int i = 0; i < out.list.size(); i++) {
-		username << out.list[i].AES_username << endl;
-		password << out.list[i].AES_password << endl;
-		name << out.list[i].AES_name << " ";
-		sex << out.list[i].AES_sex << " ";
-		age << out.list[i].AES_age << " ";
-		admin << out.list[i].AES_admin << " ";
+		if (out.vis[i] == 0) continue;
+		username << out.list[i].AES_username() << endl;
+		password << out.list[i].AES_password() << endl;
+		name << out.list[i].AES_name() << " ";
+		sex << out.list[i].AES_sex() << " ";
+		age << out.list[i].AES_age() << " ";
+		admin << out.list[i].AES_admin() << " ";
 	}
 	username.close();
 	password.close();
@@ -121,6 +122,7 @@ void File_output_Graph_map_AES(Graph_map G)
 {
 	AES solve;
 	for (int i = 0; i < G.line_list.size(); i++) {
+		if (G.vis_line[i] == 0) continue;
 		string path = "data\\line\\" + int_str(i) + ".line_AES";
 		ofstream out(path);
 		string tmp;
@@ -142,10 +144,10 @@ Graph_map File_input_Graph_map()
 {
 	file_list list;
 	AES solve;
-	list.get_file_list("data\\input\\*.line");
+	list.get_file_list(u8"data\\input\\*.line");
 	Graph_map res;
 	for (int i = 0; i < list.file_list.size(); i++) {
-		string path = "data\\input\\" + list.file_list[i] + ".line";
+		string path = "data\\input\\" + list.file_list[i];
 		ifstream line(path);
 		string line_name, sname;
 		int dis = 0;
@@ -165,6 +167,7 @@ void File_output_Graph_map(Graph_map G)
 {
 	AES solve;
 	for (int i = 0; i < G.line_list.size(); i++) {
+		if (G.vis_line[i] == 0) continue;
 		string path = "data\\output\\" + int_str(i) + ".line";
 		ofstream out(path);
 		out << G.line_list[i].name << endl;

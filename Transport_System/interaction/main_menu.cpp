@@ -1,9 +1,4 @@
-#include "main_menu.h"
-#include "interaction/bus_inquiry.h"
-#include "interaction/user_system.h"
-#include "interaction/login.h"
-#include "interaction/user.h"
-
+ï»¿#include "main_menu.h"
 
 int darw_main_menu()
 {
@@ -11,8 +6,8 @@ int darw_main_menu()
 	while (1) {
 		system("cls");
 		for (int i = 1; i <= 37; i++) printf(" ");
-		for (int i = 1; i <= 4; i++) printf(" ");
-		printf("³ÇÊÐ¹«½»²éÑ¯ÏµÍ³\n");
+		for (int i = 1; i <= 3; i++) printf(" ");
+		printf(u8"åŸŽå¸‚å…¬äº¤æŸ¥è¯¢\n");
 		for (int i = 1; i <= 37; i++) printf(" ");
 		for (int i = 1; i <= 20; i++) printf("*");
 		printf("\n");
@@ -23,9 +18,9 @@ int darw_main_menu()
 				}
 				else printf(" ");
 			}
-			if (i == 0) printf(" ¹«½»²éÑ¯ ");
-			if (i == 1) printf(" ÓÃ»§µÇÂ¼ ");
-			if (i == 2) printf(" ÍË³ö ");
+			if (i == 0) printf(u8" å…¬äº¤æŸ¥è¯¢ ");
+			if (i == 1) printf(u8" ç”¨æˆ·ç™»å½• ");
+			if (i == 2) printf(u8" é€€å‡º ");
 			for (int k = 1; k < 5; k++) printf(" ");
 			printf("\n");
 		}
@@ -48,17 +43,11 @@ void main_menu()
 	while (1) {
 		int flag = darw_main_menu();
 		if (flag == 0) {
-			bus_inquiry ();
-			//¹«½»²éÑ¯
+			bus_inquiry();
 		}
 		else if (flag == 1) {
-			user_system();
-			// ÓÃ»§µÇÂ¼
+			login();
 		}
 		else break;
 	}
-}
-
-int main() {
-	main_menu();
 }

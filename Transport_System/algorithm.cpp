@@ -40,6 +40,8 @@ void DIJ::getRoad(int s, int t, int n)
 		road.push_back(now);
 		now = pre[now];
 	}
+	road.push_back(s);
+	reverse(road.begin(), road.end());
 }
 
 void get_all_road::init(int n)
@@ -83,31 +85,26 @@ void less_change::init(int s, int t, int n)
 
 void less_change::bfs(int s, int t, Graph G)
 {
-	for (auto v : G.G[s]) {
-		q.push(make_pair(v.v, v.c));
-		dis[v.v] = 0;
-	}
+	q.push(make_pair(s, -1));
+	vis[s] = 1;
 	while (!q.empty()){
 		auto u = q.front(); q.pop();
 		for (auto v : G.G[u.first]) {
+			if (vis[v.v] == 1) continue;
 			if (v.c == u.second) {
 				if (dis[v.v] >= dis[u.first]) {
 					dis[v.v] = dis[u.first];
 					pre[v.v] = u.first;
-					if (!vis[v.v]) {
-						q.push(make_pair(v.v, v.w));
-						vis[v.v] = 1;
-					}
+					q.push(make_pair(v.v, v.c));
+					vis[v.v] = 1;
 				}
 			}
 			else {
 				if (dis[v.v] >= dis[u.first] + 1) {
 					dis[v.v] = dis[u.first] + 1;
 					pre[v.v] = u.first;
-					if (!vis[v.v]) {
-						q.push(make_pair(v.v, v.w));
-						vis[v.v] = 1;
-					}
+					q.push(make_pair(v.v, v.c));
+					vis[v.v] = 1;
 				}
 			}
 		}
@@ -122,4 +119,6 @@ void less_change::getRoad(int s, int t, int n)
 		road.push_back(now);
 		now = pre[now];
 	}
+	road.push_back(s);
+	reverse(road.begin(), road.end());
 }
