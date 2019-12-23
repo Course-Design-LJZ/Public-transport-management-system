@@ -7,3 +7,5 @@
 int draw_station(string title, Graph_map G);
 
 int draw_line(string title, Graph_map G);
+
+int draw_sex();

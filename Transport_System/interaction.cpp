@@ -1,5 +1,9 @@
 #include "interaction.h"
 
+Graph_map G;
+User_set now;
+User now_user;
+
 void init()
 {
 	now = File_input_User_set_AES();
@@ -114,6 +118,79 @@ void query_less_path()
 		cout << G.station_list[G.i_station[solve.road[i]]].name <<
 			((i == (solve.road.size() - 1)) ? "\n" : "->");
 	}
+	system("pause");
+}
+
+int signin()
+{
+	system("cls");
+	cout << u8"请输入用户名:" << endl;
+	string username;
+	cin >> username;
+	if (now.check(username) == _NO_) {
+		system("cls");
+		cout << u8"用户不存在" << endl;
+		system("pause");
+		return _NO_;
+	}
+	system("cls");
+	string password;
+	cout << u8"请输入密码:" << endl;
+	cin >> password;
+	if (now.signin(username, password) == _OK_) {
+		now_user = now.list[now.s_user[username]-1];
+		return _OK_;
+	}
+	for (int i = 1; i <= 2; i++) {
+		system("cls");
+		cout << u8"请重新输入密码" << endl;
+		cin >> password;
+		if (now.signin(username, password) == _OK_) {
+			now_user = now.list[now.s_user[username]-1];
+			return _OK_;
+		}
+	}
+	return _NO_;
+}
+
+void signup()
+{
+	system("cls");
+	cout << u8"请输入用户名:" << endl;
+	string username;
+	cin >> username;
+	if (now.check(username) == _OK_) {
+		system("cls");
+		cout << u8"用户已存在" << endl;
+		system("pause");
+		return;
+	}
+	system("cls");
+	cout << u8"请输入密码:" << endl;
+	string password;
+	cin >> password;
+	system("cls");
+	cout << u8"请输入姓名:" << endl;
+	string name;
+	cin >> name;
+	system("cls");
+	int sex = draw_sex();
+	system("cls");
+	int age;
+	cout << u8"请输入年龄:" << endl;
+	cin >> age;
+	now.signup(username, password, name, sex, age);
+	
+	system("cls");
+	cout << u8"注册成功\n";
+	cout << u8"用户名:" << username << endl;
+	cout << u8"密码:" << password << endl;
+	cout << u8"姓名:" << name << endl;
+	cout << u8"性别:";
+	if (sex == _male)cout << u8"男" << endl;
+	if (sex == _female)cout << u8"女" << endl;
+	if (sex == _none)cout << u8"保密" << endl;
+	cout << u8"年龄:" << age << endl;
 	system("pause");
 }
 

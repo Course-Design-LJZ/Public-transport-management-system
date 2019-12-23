@@ -8,9 +8,9 @@
 #include "flag.h"
 #include "darw_choice.h"
 
-static Graph_map G;
-static User_set now;
-static User now_user;
+extern Graph_map G;
+extern User_set now;
+extern User now_user;
 
 void init(); 
 void outit();
@@ -23,3 +23,6 @@ void query_line();
 void query_station_station();
 void query_sort_path();
 void query_less_path();
+
+int signin();
+void signup();

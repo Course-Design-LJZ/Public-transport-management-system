@@ -12,7 +12,7 @@ int draw_station(string title, Graph_map G)
 			cout << i << ": " << G.station_list[i].name << " ";
 		}
 		cout << endl;
-		cout << u8"请输入要选择的站点编号:(输入0退出)\n" ;
+		cout << u8"请输入要选择的站点编号:(输入0退出)\n";
 		cin >> y;
 		if (y == 0) return 0;
 		if (0 < y && y < G.station_list.size()) {
@@ -47,5 +47,34 @@ int draw_line(string title, Graph_map G)
 			system("pause");
 		}
 	}
+}
+
+int draw_sex()
+{
+	int y = 0;
+	while (1) {
+		system("cls");
+		printf(u8"请选择性别:\n");
+		for (int i = 0; i < 3; i++) {
+			if (i == y) {
+				printf(">");
+			}
+			else printf(" ");
+			if (i == 0) printf(u8" 男 ");
+			if (i == 1) printf(u8" 女 ");
+			if (i == 2) printf(u8" 保密 ");
+			printf("\n");
+		}
+		char input;
+		input = _getch();
+		if (input == 80 && y < 2) y++;
+		else if (input == 80) y = 0;
+		if (input == 72 && y > 0) y--;
+		else if (input == 72) y = 2;
+		if (input == 13) break;
+	}
+	if (y == 0) return _male;
+	if (y == 1) return _female;
+	if (y == 2) return _none;
 }
 

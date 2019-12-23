@@ -1,7 +1,7 @@
 #include"login.h"
 
 
-int user_system (){
+int draw_login (){
 	int x = 40, y = 0;
 	while (1) {
 		system("cls");
@@ -40,15 +40,16 @@ int user_system (){
 	
 } 
 
-void main_menu_user_system (){
-	while (1) {
-		int flag = user_system ();
-		if (flag == 0) {
-			// µÇÂ¼
+void login (){
+	int flag = draw_login ();
+	if (flag == 0) {
+		flag = signin();
+		if (flag == _OK_) {
+			user_system();
 		}
-		else if (flag == 1) {
-			// ×¢²á 
-		}
-		else break;
+	}
+	else if (flag == 1) {
+		signup();
+		login();
 	}
 } 

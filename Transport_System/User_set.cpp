@@ -11,8 +11,7 @@ bool User_set::check(string username)
 
 bool User_set::signin(string username, string password)
 {
-	int id = s_user[username];
-	return list[id - 1].check_password(password);
+	return list[s_user[username]-1].check_password(password);
 }
 
 void User_set::signup(string username, string password, string name, int sex, int age)

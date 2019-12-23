@@ -78,10 +78,10 @@ void File_output_User_set_AES(User_set out)
 		if (out.vis[i] == 0) continue;
 		username << out.list[i].AES_username() << endl;
 		password << out.list[i].AES_password() << endl;
-		name << out.list[i].AES_name() << " ";
-		sex << out.list[i].AES_sex() << " ";
-		age << out.list[i].AES_age() << " ";
-		admin << out.list[i].AES_admin() << " ";
+		name << out.list[i].AES_name() << endl;
+		sex << out.list[i].AES_sex() << endl;
+		age << out.list[i].AES_age() << endl;
+		admin << out.list[i].AES_admin() << endl;
 	}
 	username.close();
 	password.close();
