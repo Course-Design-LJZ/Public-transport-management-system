@@ -39,6 +39,7 @@ int draw_line(string title, Graph_map G)
 		cout << endl;
 		cout << u8"请输入要选择的路线编号:(输入0退出)\n";
 		cin >> y;
+		if (y == 0) return 0;
 		if (0 < y && y < G.line_list.size()) {
 			return y;
 		}

@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 	init();
-	infile();
+	//infile();
 	main_menu();
-	outit();
+	//outit();
 }

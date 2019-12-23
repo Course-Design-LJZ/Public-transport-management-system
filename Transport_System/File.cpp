@@ -95,7 +95,7 @@ Graph_map File_input_Graph_map_AES()
 {
 	file_list list;
 	AES solve;
-	list.get_file_list("data\\line\\*.line_AES");
+	list.get_file_list(u8"data\\line\\*.line_AES");
 	Graph_map res;
 	for (int i = 0; i < list.file_list.size(); i++) {
 		string path = "data\\line\\" + list.file_list[i];
