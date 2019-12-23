@@ -105,8 +105,8 @@ void Graph_map::Ins_line_station(int lid,int sid,int w)
 void Graph_map::Del_line(int id)
 {
 	for (int i = 0; i < line_list[id].list.size() - 2; i++) {
-		G.Del_Edge(line_list[id].list[i].id, 
-			line_list[id].list[i + 1].id, 
+		G.Del_Edge(line_list[id].list[i].id,
+			line_list[id].list[i + 1].id,
 			line_list[id].id);
 	}
 	for (int i = 0; i < line_list[id].list.size() - 1; i++) {

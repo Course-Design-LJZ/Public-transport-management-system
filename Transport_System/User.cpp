@@ -23,6 +23,11 @@ int User::query_age()
 	return this->age;
 }
 
+int User::query_admin()
+{
+	return this->admin;
+}
+
 string User::AES_username()
 {
 	AES solve;

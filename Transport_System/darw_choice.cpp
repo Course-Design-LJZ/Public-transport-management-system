@@ -7,15 +7,17 @@ int draw_station(string title, Graph_map G)
 	{
 		system("cls");
 		cout << title << endl;
-		for (int i = 1; i < G.station_list.size(); i++) {
-			if (i % 8 == 0)cout << endl;
+		for (int i = 1,j = 1; i < G.station_list.size(); i++) {
+			if (G.vis_station[i] == 0) continue;
+			if (j % 8 == 0)cout << endl;
 			cout << i << ": " << G.station_list[i].name << " ";
+			j++;
 		}
 		cout << endl;
 		cout << u8"请输入要选择的站点编号:(输入0退出)\n";
 		cin >> y;
 		if (y == 0) return 0;
-		if (0 < y && y < G.station_list.size()) {
+		if (0 < y && y < G.station_list.size() && G.vis_station[y] == 1) {
 			return y;
 		}
 		else {
@@ -32,15 +34,17 @@ int draw_line(string title, Graph_map G)
 	{
 		system("cls");
 		cout << title << endl;
-		for (int i = 1; i < G.line_list.size(); i++) {
-			if (i % 8 == 0)cout << endl;
+		for (int i = 1,j = 1; i < G.line_list.size(); i++) {
+			if (G.vis_line[i] == 0) continue;
+			if (j % 8 == 0)cout << endl;
 			cout << i << ": " << G.line_list[i].name << " ";
+			j++;
 		}
 		cout << endl;
 		cout << u8"请输入要选择的路线编号:(输入0退出)\n";
 		cin >> y;
 		if (y == 0) return 0;
-		if (0 < y && y < G.line_list.size()) {
+		if (0 < y && y < G.line_list.size() && G.vis_line[y] == 1) {
 			return y;
 		}
 		else {

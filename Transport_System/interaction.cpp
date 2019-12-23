@@ -194,4 +194,137 @@ void signup()
 	system("pause");
 }
 
+void add_line()
+{
+	system("cls");
+	cout << u8"请输入路线名:" << endl;
+	string line_name;
+	cin >> line_name;
+	int flag = draw_station(u8"请选择起始站", G);
+	if (flag == 0) {
+		system("cls");
+		cout << u8"添加取消" << endl;
+		system("pause");
+		return;
+	}
+
+	G.Ins_line(line_name, G.station_list[flag]);
+
+	int id = G.s_line[line_name];
+
+	while (1)
+	{
+		int idd = G.line_list[id].list.size();
+		flag = draw_station(u8"请选择要添加的站，上一站"+G.line_list[id].list[idd-1].name, G);
+		if (flag == 0) break;
+		system("cls");
+		cout << u8"请输入" << G.line_list[id].list[idd - 1].name << u8"到" << G.station_list[flag].name << u8"的距离:" << endl;
+		int w;
+		cin >> w;
+		G.Ins_line_station(id, flag, w);
+	}
+}
+
+void del_line()
+{
+	int flag = draw_line(u8"请选择要删除的线路", G);
+	if (flag == 0) return;
+	G.Del_line(flag);
+}
+
+void change_line()
+{
+	int flag = draw_line(u8"请选择要修改的线路", G);
+	if (flag == 0) return;
+
+	string s = G.line_list[flag].name;
+
+	flag = draw_station(u8"请选择起始站", G);
+	if (flag == 0) {
+		system("cls");
+		cout << u8"修改取消" << endl;
+		system("pause");
+		return;
+	}
+
+	G.Del_line(flag);
+	G.Ins_line(s, G.station_list[flag]);
+
+	int id = G.s_line[s];
+
+	while (1)
+	{
+		int idd = G.line_list[id].list.size();
+		flag = draw_station(u8"请选择要添加的站，上一站" + G.line_list[id].list[idd - 1].name, G);
+		if (flag == 0) break;
+		system("cls");
+		cout << u8"请输入" << G.line_list[id].list[idd - 1].name << u8"到" << G.station_list[flag].name << u8"的距离:" << endl;
+		int w;
+		cin >> w;
+		G.Ins_line_station(id, flag, w);
+	}
+}
+
+void add_station()
+{
+	cout << u8"请输入要加入的站点名称:" << endl;
+	string name;
+	int flag = G.Ins_station(name);
+	if (flag == 0) return;
+	if (flag == _NO_) {
+		system("cls");
+		cout << u8"该站已存在" << endl;
+		system("pause");
+		return;
+	}
+	else {
+		system("cls");
+		cout << u8"添加成功" << endl;
+		system("pause");
+		return;
+	}
+}
+
+void del_station()
+{
+	int flag = draw_station(u8"请选择要删除的站点:", G);
+	if (flag == 0) return;
+	if (G.Del_station(flag) == _OK_) {
+		cout << u8"删除成功" << endl;
+		system("pause");
+	}
+	else {
+		cout << u8"删除失败,还有以下路线经过该站点:" << endl;
+		for (int i = 0; i < G.station_list[flag].pass_line.size(); i++) {
+			cout << G.line_list[G.station_list[flag].pass_line[i]].name << endl;
+		}
+		system("pause");
+	}
+}
+
+void change_station()
+{
+	int flag = draw_station(u8"请选择要修改的站点:", G);
+	if (flag == 0) return;
+	system("cls");
+	cout << u8"请输入新的站点名:" << endl;
+	string s;
+	cin >> s;
+	if (G.change_station(flag, s) == _OK_) {
+		cout << u8"修改成功" << endl;
+		system("pause");
+	}
+	else {
+		cout << u8"站点名冲突,修改失败" << endl;
+		system("cls");
+	}
+}
+
+
+
+
+
+
+
+
 

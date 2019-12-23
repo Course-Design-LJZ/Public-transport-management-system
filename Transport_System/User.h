@@ -15,6 +15,7 @@ public:
 	string query_name();
 	int query_sex();
 	int query_age();
+	int query_admin();
 
 	string AES_username();
 	string AES_password();

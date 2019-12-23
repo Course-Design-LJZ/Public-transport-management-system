@@ -26,3 +26,15 @@ void query_less_path();
 
 int signin();
 void signup();
+
+void add_line();
+void del_line();
+void change_line();
+
+void add_station();
+void del_station();
+void change_station(); 
+
+void change_info();
+void change_password();
+void del_user();

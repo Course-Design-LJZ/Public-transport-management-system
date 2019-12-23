@@ -1,4 +1,5 @@
 #include "Graph.h"
+#include <iostream>
 
 int Graph::Ins() {
 	if (G.size() == 0) {
@@ -65,7 +66,7 @@ int Graph::Del_Edge(int u, int v,int c)
 
 	if (flag) {
 		for (int i = 0; i < G[v].size(); i++) {
-			if (G[v][i].v == u && G[u][i].c == c) {
+			if (G[v][i].v == u && G[v][i].c == c) {
 				G[v].erase(G[v].begin() + i);
 			}
 		}

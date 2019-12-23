@@ -30,6 +30,8 @@
     <ClCompile Include="interaction.cpp" />
     <ClCompile Include="interaction\bus_inquiry.cpp" />
     <ClCompile Include="interaction\Line and Station choice.cpp" />
+    <ClCompile Include="interaction\line_choice.cpp" />
+    <ClCompile Include="interaction\station_choice.cpp" />
     <ClCompile Include="interaction\user_system.cpp" />
     <ClCompile Include="interaction\main_menu.cpp" />
     <ClCompile Include="interaction\login.cpp" />
@@ -50,6 +52,8 @@
     <ClInclude Include="interaction.h" />
     <ClInclude Include="interaction\bus_inquiry.h" />
     <ClInclude Include="interaction\Line and Station choice.h" />
+    <ClInclude Include="interaction\line_choice.h" />
+    <ClInclude Include="interaction\station_choice.h" />
     <ClInclude Include="interaction\user_system.h" />
     <ClInclude Include="interaction\main_menu.h" />
     <ClInclude Include="interaction\login.h" />

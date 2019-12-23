@@ -89,6 +89,7 @@ void less_change::bfs(int s, int t, Graph G)
 	vis[s] = 1;
 	while (!q.empty()){
 		auto u = q.front(); q.pop();
+		vis[u.first] = 1;
 		for (auto v : G.G[u.first]) {
 			if (vis[v.v] == 1) continue;
 			if (v.c == u.second) {
@@ -96,7 +97,6 @@ void less_change::bfs(int s, int t, Graph G)
 					dis[v.v] = dis[u.first];
 					pre[v.v] = u.first;
 					q.push(make_pair(v.v, v.c));
-					vis[v.v] = 1;
 				}
 			}
 			else {
@@ -104,7 +104,6 @@ void less_change::bfs(int s, int t, Graph G)
 					dis[v.v] = dis[u.first] + 1;
 					pre[v.v] = u.first;
 					q.push(make_pair(v.v, v.c));
-					vis[v.v] = 1;
 				}
 			}
 		}

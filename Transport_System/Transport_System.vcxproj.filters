@@ -52,6 +52,12 @@
     <Filter Include="function\interaction">
       <UniqueIdentifier>{59dcc284-f39d-4f25-b50d-3e36d4ddd082}</UniqueIdentifier>
     </Filter>
+    <Filter Include="interaction\line_choice">
+      <UniqueIdentifier>{04506ecb-f265-40ab-ad9f-09d8aa30c49f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interaction\station_choice">
+      <UniqueIdentifier>{56f27878-aa34-4d60-a488-5ea3632acc96}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -102,6 +108,12 @@
     </ClCompile>
     <ClCompile Include="darw_choice.cpp">
       <Filter>function\interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\line_choice.cpp">
+      <Filter>interaction\line_choice</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\station_choice.cpp">
+      <Filter>interaction\station_choice</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +167,12 @@
     </ClInclude>
     <ClInclude Include="darw_choice.h">
       <Filter>function\interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\station_choice.h">
+      <Filter>interaction\station_choice</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\line_choice.h">
+      <Filter>interaction\line_choice</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
