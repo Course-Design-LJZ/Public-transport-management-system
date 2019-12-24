@@ -22,10 +22,16 @@ void outit() {
 
 void infile() {
 	G = File_input_Graph_map();
+	system("cls");
+	cout << u8"导入成功" << endl;
+	system("pause");
 }
 
 void outfile() {
 	File_output_Graph_map(G);
+	system("cls");
+	cout << u8"导出成功" << endl;
+	system("pause");
 }
 
 void query_station()
