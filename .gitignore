@@ -350,4 +350,6 @@ MigrationBackup/
 .ionide/
 
 # data
-data/
+*.line
+*.user
+*.line_AES
