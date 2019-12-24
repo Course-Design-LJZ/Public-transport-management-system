@@ -191,6 +191,7 @@ void signup()
 	if (sex == _female)cout << u8"女" << endl;
 	if (sex == _none)cout << u8"保密" << endl;
 	cout << u8"年龄:" << age << endl;
+	outit();
 	system("pause");
 }
 
@@ -223,6 +224,7 @@ void add_line()
 		cin >> w;
 		G.Ins_line_station(id, flag, w);
 	}
+	outit();
 }
 
 void del_line()
@@ -230,6 +232,7 @@ void del_line()
 	int flag = draw_line(u8"请选择要删除的线路", G);
 	if (flag == 0) return;
 	G.Del_line(flag);
+	outit();
 }
 
 void change_line()
@@ -263,12 +266,15 @@ void change_line()
 		cin >> w;
 		G.Ins_line_station(id, flag, w);
 	}
+	outit();
 }
 
 void add_station()
 {
+	system("cls");
 	cout << u8"请输入要加入的站点名称:" << endl;
 	string name;
+	cin >> name;
 	int flag = G.Ins_station(name);
 	if (flag == 0) return;
 	if (flag == _NO_) {
@@ -280,6 +286,7 @@ void add_station()
 	else {
 		system("cls");
 		cout << u8"添加成功" << endl;
+		outit();
 		system("pause");
 		return;
 	}
@@ -290,10 +297,13 @@ void del_station()
 	int flag = draw_station(u8"请选择要删除的站点:", G);
 	if (flag == 0) return;
 	if (G.Del_station(flag) == _OK_) {
+		system("cls");
 		cout << u8"删除成功" << endl;
+		outit();
 		system("pause");
 	}
 	else {
+		system("cls");
 		cout << u8"删除失败,还有以下路线经过该站点:" << endl;
 		for (int i = 0; i < G.station_list[flag].pass_line.size(); i++) {
 			cout << G.line_list[G.station_list[flag].pass_line[i]].name << endl;
@@ -311,20 +321,94 @@ void change_station()
 	string s;
 	cin >> s;
 	if (G.change_station(flag, s) == _OK_) {
+		system("cls");
 		cout << u8"修改成功" << endl;
+		outit();
 		system("pause");
 	}
 	else {
+		system("cls");
 		cout << u8"站点名冲突,修改失败" << endl;
 		system("cls");
 	}
 }
 
+void change_info()
+{
+	while (1)
+	{
+		int id = now.s_user[now_user.username] - 1;
+		int flag = draw_edit_user(now_user);
+		if (flag == 0) {
+			system("cls");
+			cout << u8"请输入新的姓名:" << endl;
+			string name;
+			cin >> name;
+			now.list[id].set_name(name);
+		}
+		else if (flag == 1) {
+			int sex = draw_sex();
+			now.list[id].set_sex(sex);
+		}
+		else if (flag == 2) {
+			system("cls");
+			cout << u8"请输入新的年龄:" << endl;
+			int age;
+			cin >> age;
+			now.list[id].set_age(age);
+		}
+		else return;
+		now_user = now.list[id];
+	}
+	outit();
+}
 
+void change_password()
+{
+	system("cls");
+	int id = now.s_user[now_user.username] - 1;
+	cout << u8"请输入新的密码:" << endl;
+	string password;
+	cin >> password;
+	now.list[id].set_password(password);
+	now_user = now.list[id];
+	system("cls");
+	cout << u8"修改成功" << endl;
+	outit();
+}
 
+void del_user()
+{
+	system("cls");
+	if (now.s_user[now_user.username] - 1 == 0) {
+		cout << u8"后门账户无法删除" << endl;
+		system("pause");
+	}
+	else {
+		now.signoff(now.s_user[now_user.username] - 1);
+		cout << u8"注销成功" << endl;
+		outit();
+		system("pause");
+	}
+	User tmp;
+	now_user = tmp;
+}
 
-
-
-
-
-
+void change_admin()
+{
+	int flag = draw_user(u8"请选择要修改权限的用户", now);
+	if (flag == 0) return;
+	int tmp = draw_change();
+	if (tmp > 2) return;
+	if (now.list[flag].set_admin(tmp, now_user.query_admin()) == _OK_) {
+		system("cls");
+		cout << u8"修改成功" << endl;
+		outit();
+		system("pause");
+	}
+	else {
+		system("cls");
+		cout << u8"修改失败，权限不够" << endl;
+		system("pause");
+	}
+}

@@ -26,10 +26,11 @@ public:
 
 	void init(string username, string password, string name, int sex, int age, int admin);
 
-	bool set_admin(bool flag,int admin);
+	bool set_admin(bool flag1,int flag2);
 	void set_name(string s);
 	void set_age(int age);
 	void set_sex(int flag);
+	void set_password(string s);
 
 private:
 	string password;

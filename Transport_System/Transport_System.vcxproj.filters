@@ -58,6 +58,9 @@
     <Filter Include="interaction\station_choice">
       <UniqueIdentifier>{56f27878-aa34-4d60-a488-5ea3632acc96}</UniqueIdentifier>
     </Filter>
+    <Filter Include="interaction\user_edit">
+      <UniqueIdentifier>{16de5ea3-5829-4d76-89bb-6a2f94229477}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -114,6 +117,9 @@
     </ClCompile>
     <ClCompile Include="interaction\station_choice.cpp">
       <Filter>interaction\station_choice</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\user_edit.cpp">
+      <Filter>interaction\user_edit</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +179,9 @@
     </ClInclude>
     <ClInclude Include="interaction\line_choice.h">
       <Filter>interaction\line_choice</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\user_edit.h">
+      <Filter>interaction\user_edit</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

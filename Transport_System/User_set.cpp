@@ -45,13 +45,6 @@ void User_set::signoff(int id)
 	s_user[list[id].username] = 0;
 }
 
-void User_set::change_info(int id, string name, int sex, int age)
-{
-	list[id].set_name(name);
-	list[id].set_sex(sex);
-	list[id].set_age(age);
-}
-
 void User_set::Ins_Uesr(string username, string password, string name, int sex, int age,int admin)
 {
 	User tmp;

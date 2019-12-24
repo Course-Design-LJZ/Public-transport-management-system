@@ -1,4 +1,5 @@
 #include "User.h"
+#include <iostream>
 
 bool User::check_password(string s)
 {
@@ -74,10 +75,10 @@ void User::init(string username, string password, string name, int sex, int age,
 	this->admin = admin;
 }
 
-bool User::set_admin(bool flag,int admin)
+bool User::set_admin(bool flag1,int flag2)
 {
-	if (admin > this->admin&& admin <= _0ADMIN) {
-		this->admin = flag;
+	if (_USER<=flag1 && flag1<=_ADMIN && flag2 > this->admin && flag2 <= _0ADMIN) {
+		this->admin = flag1;
 		return _OK_;
 	}
 	return _NO_;
@@ -96,4 +97,9 @@ void User::set_age(int age)
 void User::set_sex(int flag)
 {
 	this->sex = flag;
+}
+
+void User::set_password(string s)
+{
+	this->password = s;
 }

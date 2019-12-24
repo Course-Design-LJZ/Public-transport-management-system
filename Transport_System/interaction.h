@@ -38,3 +38,4 @@ void change_station();
 void change_info();
 void change_password();
 void del_user();
+void change_admin();
