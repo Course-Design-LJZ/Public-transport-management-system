@@ -7,6 +7,7 @@
 #include "algorithm.h"
 #include "flag.h"
 #include "darw_choice.h"
+#include<direct.h>
 
 extern Graph_map G;
 extern User_set now;

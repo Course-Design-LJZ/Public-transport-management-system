@@ -6,6 +6,11 @@ User now_user;
 
 void init()
 {
+	_mkdir("data");
+	_mkdir("data\\user");
+	_mkdir("data\\line");
+	_mkdir("data\\input");
+	_mkdir("data\\output");
 	now = File_input_User_set_AES();
 	G = File_input_Graph_map_AES();
 }
