@@ -385,6 +385,7 @@ void change_password()
 	now_user = now.list[id];
 	system("cls");
 	cout << u8"ÐÞ¸Ä³É¹¦" << endl;
+	system("pause");
 	outit();
 }
 
