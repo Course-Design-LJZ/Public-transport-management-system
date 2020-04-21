@@ -53,7 +53,7 @@ void get_all_road::init(int n)
 
 void get_all_road::dfs(int u, int t,Graph G)
 {
-	if (que.size() >= 3) return;
+	if (res.size() >= 3) return;
 	que.push_back(u);
 	vis[u] = 1;
 	if (u == t) {
