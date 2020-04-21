@@ -31,9 +31,9 @@ int draw_line_and_station_choice (){
 		char input;
 		input = _getch();
 		if (input == 80 && y < 3) y++;
-		else if(input == 80) y = 0;
-		if (input == 72 && y > 0) y--;
-		else if (input == 72) y = 4;
+		else if (input = 80)y = 0;
+		if (input == 72 && y > 0)y--;
+		else if (input == 72)y = 3;
 		if (input == 13) break;
 	}
 	return y;
